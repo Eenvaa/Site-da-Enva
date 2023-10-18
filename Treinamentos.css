@@ -130,6 +130,9 @@ footer{
     ._h1_Do_Treinamento{
         padding-top: 10vh;
     }
+    .Logo_No_Comeco{
+        display: none;
+    }
     .itens {
         flex-direction: column;
         align-items: center;
