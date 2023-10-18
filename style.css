@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Billian-Bold';
+    src: url(fontes/FontsFree-Net-Billian-Bold.ttf) format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s;
+}
+.itens{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+}
+.Botoes{
+    margin-left: 44em;
+}
+.Botao_da_header{
+    font-weight: bolder;
+    margin: 0.5em;
+    font-size: 20px;
+}
+.animacao{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 9vh;
+}
+.Imagens{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url(imgs/fundo_animado/encontro_das_aguas_2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: mudar 25s infinite ease-in-out ;
+}
+.Introducao {
+    font-family: Billian-Bold;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #111;
+    font-size: 30vh;
+    letter-spacing: 7px;
+}
+.Quem_e_a_Enva {
+    background-color:#C1E1C1;
+    position: relative;
+    min-height: 400px;
+    padding-left: 40px;
+}
+.Quem_e_a_Enva h1{ 
+    position: relative;
+    font-size: 60px;
+}
+.descricao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+}
+.Quem_somos{
+    align-self: left;
+    
+
+}
+.Quem_somos p{ 
+    font-size: 30px;
+}
+.Servicos{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.Servicos h1{
+    text-align: center;
+    font-size: 60px;
+}
+#slider{
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 100%;
+    text-align: center;
+}
+
+#slider input[type=radio] {
+    display: none;
+}
+#slider label {
+    cursor: pointer;
+    text-decoration: none;
+}
+#slides{
+    padding: 10px;
+    border: 3px solid #ccc;
+    background-color: #fff;
+    position: relative;
+    z-index: -1;
+}
+#overflow{
+    width: 100%;
+    overflow: hidden;
+}
+#slide1:checked ~ #slides ._Dentro {
+    margin-left: 0;
+}
+#slide2:checked ~ #slides ._Dentro {
+    margin-left: -100%;
+}
+#slide3:checked ~ #slides ._Dentro {
+    margin-left: -200%;
+}
+#slide4:checked ~ #slides ._Dentro {
+    margin-left: -300%;
+}
+#slide5:checked ~ #slides ._Dentro {
+    margin-left: -400%;
+}  
+#slides ._Dentro {
+    width: 500%;
+    transition: margin-left 800ms cubic-bezier(0.770,0.000,0.175,1.000);
+    line-height: normal;
+    height: 400px;
+    display: flex;
+}  
+#slides .slide{
+    width: 20%;
+    float:left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+    color: #fff;
+}  
+#slides .slide_1{
+    background-color: #00171F;
+}
+#slides .slide_2{
+    background-color: #003459;
+}
+#slides .slide_3{
+    background-color: #007EA7;
+}
+#slides .slide_4{
+    background-color: #00A8E8;
+}
+ 
+#primeiro_slide{
+    background-image: url(imgs/imagens_de_servicos/Filtro_do_slider1.png);
+}
+#segundo_slide{
+    background-image: url(imgs/imagens_de_servicos/segundo_slide_com_filtro.png);
+}
+#terceiro_slide{
+    background-image: url(imgs/imagens_de_servicos/terceira_imagem_com_filtro.png);
+}
+#quarto_slide{
+    background-image: url(imgs/imagens_de_servicos/quarto_slider_com_filtro.png);
+}
+#quinto_slide{
+    background-image: url(imgs/imagens_de_servicos/quinto_slider_com_filtro.png);
+}
+#primeiro_slide,#segundo_slide,#terceiro_slide,
+#quarto_slide,#quinto_slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.texto_do_slide{
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity/see-through */
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 30px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#controles{
+    margin: -185px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+}  
+#controles label{
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .7;
+    position: relative;
+    bottom: 90%;
+}    
+#controles label:hover {
+    opacity: 1; 
+}
+#slide1:checked ~ #controles label:nth-child(2),
+#slide2:checked ~ #controles label:nth-child(3),
+#slide3:checked ~ #controles label:nth-child(4),
+#slide4:checked ~ #controles label:nth-child(5),
+#slide5:checked ~ #controles label:nth-child(1){
+    background: url(imgs/imagens_de_servicos/nextarrow.png) no-repeat;
+    background-size: cover;
+    float: right;   
+    margin:0 -50px 0 0;
+    display: block;
+}
+#slide1:checked ~ #controles label:nth-child(5),
+#slide2:checked ~ #controles label:nth-child(1),
+#slide3:checked ~ #controles label:nth-child(2),
+#slide4:checked ~ #controles label:nth-child(3),
+#slide5:checked ~ #controles label:nth-child(4){
+    background: url(imgs/imagens_de_servicos/nextarrow.png) no-repeat;
+    background-size: cover;
+    float: left;   
+    transform: scaleX(-1);
+    margin:0 0 0 -50px;
+    display: block;
+}
+#bullets{
+    margin: 150px 0 0;
+    text-align: center;
+}
+#bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4),
+#slide5:checked ~ #bullets label:nth-child(5){
+    background: #444;
+}
+
+
+.Equipe_da_Enva{
+    margin-top: 20px;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #97a97c;
+}
+.Quadro_da_equipe{
+    background: #111;
+    width: 580px;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.Quadro_da_equipe h2{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: #fff;
+}
+.Quadro_da_equipe hr{
+    width: 100%;
+    margin: 10px auto;
+    color: #fff;
+}
+.membros{
+    display: flex;
+    justify-content: space-around;
+}
+.Time_membros{
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.integrantes{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.Titulo_de_nome_membro{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    margin: 7px;
+    color: #fff;
+}
+.Funcao{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin: 7px;
+    color: #fff;
+}
+footer{
+    background-color: #772f1a;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+._contato{
+    width: 20%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+}
+.icone_de_contato{
+    width: 50px;
+    height: 50px;
+}
+.Texto_De_Contato{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:900px),(max-width:768px),
+(max-width:480px){
+    
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        
+        align-items: center;
+        z-index: 100;
+    }
+
+
+    .itens {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+       
+    }
+
+    .Botoes {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+    }
+    .Botoes .Botao_da_header{
+        font-size: 1.2em;
+    }
+
+    .Introducao {
+        font-size: 8vh;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .Imagens {
+        width: 100vw;
+        height: 200vw;
+        overflow: hidden;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .descricao {
+        flex-direction: column;
+    }
+
+    .Quem_e_a_Enva {
+        margin-top: 0;
+        padding: 20px;
+    }
+    .Quem_somos p {
+        font-size: 1.3em;
+        text-align: center;
+    }
+    .ESG {
+        text-align: center;
+    }
+    .ESG img {
+        max-width: 100%;
+        height: auto;
+    }
+    .Servicos h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+    #slider {
+        width: 20em;
+        margin: 0 auto;
+    }
+    #slides #primeiro_slide,#slides #segundo_slide,#slides #terceiro_slide,
+    #slides #quarto_slide {
+        background-size: 100% 100%;
+    }
+    #slides  #quinto_slide {
+        background-size: 20em 100%;
+    }
+    .texto_do_slide {
+        font-size: 1.25em;
+    }
+    #controles label {
+        right: 5px;
+    }
+    .Quadro_da_equipe{
+        width: 24em;
+        }
+
+    .Time_membros {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .integrantes {
+        width: 8em;
+        height: 8em;
+        margin: 10px auto;
+    }
+
+    .Titulo_de_nome_membro {
+        font-size: 35px;
+        margin: 5px;
+    }
+
+    .Funcao {
+        font-size: 22px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    ._contato {
+        position: relative;
+        right: 20vw;
+    }
+
+    .icone_de_contato {
+        width: 5em;
+        height: 2em;
+    }
+
+    .Texto_De_Contato {
+        width: auto;
+        font-size: 1em;
+        margin-top: 3px;
+        text-align: center;
+    }
+}
+
+
+
+@keyframes mudar {
+    
+    0%{
+        background-image: url(imgs/fundo_animado/encontrofiltro.png);
+    }
+    20%{
+        background-image: url(imgs/fundo_animado/ESSA.png);
+    }
+    40%{
+        background-image: url(imgs/fundo_animado/3comfiltro.png);
+    }
+    60%{
+        background-image: url(imgs/fundo_animado/micocomfiltro.png);
+    }
+    80%{
+        background-image: url(imgs/fundo_animado/4comfiltro.png);
+    }
+    100%{
+        background-image: url(imgs/fundo_animado/encontrofiltro.png);
+    }
+}

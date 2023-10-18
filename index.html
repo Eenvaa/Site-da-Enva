@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <title>Enva</title>
+    <link rel="icon" href="imgs/logo_enva/apenas_a_logo.PNG">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="itens">
+            <img class="Logo_No_Comeco" src="imgs/logo_enva/01.png" alt="Logo da Enva" style="width: 15vw;">
+            <div class="Botoes">
+                <a class="Botao_da_header" href="index.html" style="font-family: 'Nunito', sans-serif; text-decoration: none; color: black;">Página inicial</a>
+                <a class="Botao_da_header" href="Treinamentos.html" style="font-family: 'Nunito', sans-serif; text-decoration: none; color: black;">Treinamentos</a>
+                <a class="Botao_da_header" href="#Contatos" style="font-family: 'Nunito', sans-serif; text-decoration: none; color: black;">Contato</a>
+            </div>
+        </div>    
+    </nav>
+    <main class="Class_da_Main" id="Principal">
+        <section class="animacao" id="Secao_de_Introducao">
+              <div class="Imagens">
+                
+                    <h1 class="Introducao"> <b>env<span style="color: #E0B285;">a</span></b> </h1>
+                  </div> 
+                 
+        </section>
+        <section class="Quem_e_a_Enva">
+          <!-- <h1>Quem somos</h1> <br> <br> -->
+            <div class="descricao">
+                <div class="Quem_somos">
+                    <p 
+                    style="
+                        font-family: 'Nunito', sans-serif;
+                        font-weight: 900;
+                    "><span class="_Span_Do_Quem_Somos" style="font-size: 4em;">Quem Somos</span><br><br>Somos uma empresa de consultoria especializada em ESG (Environmental, Social, and<br>Governance), dedicada a 
+                        fornecer soluções inovadoras para empresas que desejam se destacar<br>na jornada em direção à responsabilidade corporativa, à 
+                        sustentabilidade ambiental e ao<br>impacto social positivo.</p>
+                </div> <br>
+                <div class="ESG">
+                    <img src="imgs/Quem_somos_imagem/Quem_somos.png" alt="Img de ESG">
+                </div>
+            </div>
+        </section>
+        <section class="Servicos">
+            <h1 style="font-family: 'Kanit', sans-serif;">Nossos Serviços</h1> <br> <br>
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked onclick="mudarindex(this)">
+                <input type="radio" name="slider" id="slide2" onclick="mudarindex(this)">
+                <input type="radio" name="slider" id="slide3" onclick="mudarindex(this)">
+                <input type="radio" name="slider" id="slide4" onclick="mudarindex(this)">
+                <input type="radio" name="slider" id="slide5" onclick="mudarindex(this)">
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="_Dentro">
+                            <div class="slide slide_1" id="primeiro_slide">
+                               <div class="texto_do_slide">
+                                    <p>Consultoria e Assessoria em Licenciamento Ambiental</p>
+                                </div>
+                            </div>
+                            <div class="slide slide_2" id="segundo_slide">
+                                    <div class="texto_do_slide">
+                                    <p>Certificações Ambientais</p>
+                                </div>
+                            </div>
+                            <div class="slide slide_3" id="terceiro_slide">
+                                <div class="texto_do_slide">
+                                    <p>Implementação de Práticas Ambientais, Sociais e de Governança</p>
+                                </div>
+                            </div>
+                            <div class="slide slide_4"  id="quarto_slide">
+                                <div class="texto_do_slide">
+                                    <p>Supervisão, Gerenciamento e Monitoramento Ambiental</p>
+                                </div>
+                            </div>
+                            <div class="slide slide_5"  id="quinto_slide">
+                                    <div class="texto_do_slide">
+                                        <p>Treinamentos em ESG e Certificações Ambientais. </p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="controles">
+                    <label for="slide1" id="label_do_slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                    <label for="slide5"></label>
+                </div>
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                    <label for="slide5"></label>
+                </div>
+            </div>    
+        </section>
+        <section class="Equipe_da_Enva">
+            <div class="Quadro_da_equipe">
+                <h2>Time executivo</h2>
+                <hr>
+                <div class="membros">
+                    <div class="Time_membros">
+                        <img class="integrantes" src="imgs/integrantes/elen.jpeg" alt="">
+                        <h4  class="Titulo_de_nome_membro">Elenize Avelino</h4   >
+                        <p class="Funcao">Economista</p>
+                        <p class="Funcao">Mestre em Ciências Ambientais e Sustentabilidade
+                             na Amazônia. </p>
+                    </div>
+                    <div class="Time_membros">
+                        <img class="integrantes" src="imgs/integrantes/kayque.jpeg" alt="">
+                        <h4  class="Titulo_de_nome_membro">Kaique Soares</h4 >
+                        <p class="Funcao">Engenheiro ambiental</p>
+                        <p class="Funcao">Mestre em Ciência e Tecnologia para
+                             Recursos Amazônicos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="Contatos">
+        <div class="_contato">
+            <img class="icone_de_contato" src="imgs/icones_de_contato/Celular.png" alt="">
+            <p class="Texto_De_Contato">(92) 9 8125-2816</p>
+        </div>
+        <div class="_contato">
+            <img class="icone_de_contato" src="imgs/icones_de_contato/e-mail.png" alt="">
+            <p style="padding-left: 5px;" class="Texto_De_Contato">sustentabilidade@enva.global </p>
+        </div>
+        <div class="_contato">
+            <img style="padding-left: 5px;" class="icone_de_contato" src="imgs/icones_de_contato/_Logo_Do_Insta_Colorida.png" alt="">
+            <a href="https://www.instagram.com/enva.global/" target="_blank" style="
+            padding-left: 5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;" 
+            class="Texto_De_Contato">@enva.global</a>
+        </div>
+        <div class="_contato">
+            <img class="icone_de_contato" src="imgs/icones_de_contato/whatsapp.png" alt="">
+            <a class="Texto_De_Contato" target="_blank"
+            style="
+            padding-left: 5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;"
+            href="https://api.whatsapp.com/send/?phone=5592981252816&text&type=phone_number&app_absent=0">
+                Fale conosco
+            </a>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

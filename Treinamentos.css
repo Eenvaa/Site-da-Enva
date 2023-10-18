@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    padding-top: 10vh;
+}
+
+span{
+    font-weight: bolder;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s;
+}
+.itens{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+}
+.Botoes{
+    margin-left: 44em;
+}
+.Botao_da_header{
+    font-weight: bolder;
+    margin: 0.5em;
+    font-size: 20px;
+}
+body{
+    background-color: #E0B285;
+}
+
+main{
+    width: 100%;
+    min-height: 120vh;
+}
+._h1_Do_Treinamento{
+    font-size: 90px;
+}
+
+
+.Caixas_De_Treinamentos{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+.Borda{
+    cursor: pointer;
+    border: solid 2px #111;
+    width: 20%;
+    min-height: 34.375em;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+.Nome_Do_Treinamento{
+    padding-top: 15px;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+.Info_do_curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Icone{
+    margin-left: 0.625em;
+}
+.Descricao_Do_Icone{
+    font-size: 1.125em;
+}
+footer{
+    background-color: #772f1a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+._contato{
+    width: 20%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-wrap: nowrap;
+}
+.icone_de_contato{
+    width: 50px;
+    height: 50px;
+}
+.Texto_De_Contato{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:900px),(max-width:768px),
+(max-width:480px){
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        align-items: center;
+        z-index: 100;
+    }
+    ._h1_Do_Treinamento{
+        padding-top: 10vh;
+    }
+    .itens {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+       
+    }
+
+    .Botoes {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+    }
+    .Botoes .Botao_da_header{
+        font-size: 1.2em;
+    }
+
+    ._h1_Do_Treinamento{
+        font-size: 4em;
+    }
+    .Caixas_De_Treinamentos{
+        flex-direction: column;
+    }
+    .Borda{
+        width: 95%;
+        min-height: 0;
+        margin-bottom: 2em;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    ._contato {
+        position: relative;
+        right: 20vw;
+    }
+
+    .icone_de_contato {
+        width: 5em;
+        height: 2em;
+    }
+
+    .Texto_De_Contato {
+        width: auto;
+        font-size: 1em;
+        margin-top: 3px;
+        text-align: center;
+    }
+}
